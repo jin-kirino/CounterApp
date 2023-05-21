@@ -16,7 +16,7 @@ struct ContentView: View {
                 Color.orange
                     .ignoresSafeArea()
                 Button {
-                    print("+1")
+                    addOneCount()
                 } label: {
                     Text("")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -31,7 +31,7 @@ struct ContentView: View {
                     Spacer()
                     HStack {
                         Button {
-                            print("-1")
+                            MinusOneCount()
                         } label: {
                             Text("ー")
                                 .font(.title)
@@ -48,6 +48,14 @@ struct ContentView: View {
                 }
             }
         }
+    }
+
+    private func addOneCount() {
+        count += 1
+    }
+
+    private func MinusOneCount() {
+        count -= 1
     }
 }
 
