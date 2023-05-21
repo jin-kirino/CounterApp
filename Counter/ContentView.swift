@@ -26,6 +26,7 @@ struct ContentView: View {
                     Spacer()
                     Text("\(count)")
                         .font(.system(size: 90))
+                        .foregroundColor(Color.white)
                         .padding(.bottom, 20)
                     Spacer()
                     HStack {
@@ -34,11 +35,11 @@ struct ContentView: View {
                         } label: {
                             Text("ー")
                                 .font(.title)
-                                .frame(width: 30, height: 30)
-                                .foregroundColor(Color.black)
+                                .frame(width: 40, height: 40)
+                                .foregroundColor(Color.white)
                                 .overlay(
                                     Circle()
-                                        .stroke(Color.green, lineWidth: 3)
+                                        .stroke(Color.white, lineWidth: 3)
                                 )
                                 .padding()
                         }
