@@ -25,7 +25,7 @@ struct ContentView: View {
                 VStack {
                     Spacer()
                     Text("\(count)")
-                        .font(.system(size: 90))
+                        .font(.system(size: 120))
                         .foregroundColor(Color.white)
                         .padding(.bottom, 20)
                     Spacer()
@@ -34,14 +34,14 @@ struct ContentView: View {
                             MinusOneCount()
                         } label: {
                             Text("ー")
-                                .font(.title)
-                                .frame(width: 40, height: 40)
+                                .font(.system(size: 15))
+                                .frame(width: 20, height: 20)
                                 .foregroundColor(Color.white)
                                 .overlay(
                                     Circle()
                                         .stroke(Color.white, lineWidth: 3)
                                 )
-                                .padding()
+                                .padding(.leading)
                         }
                         Spacer()
                     }
