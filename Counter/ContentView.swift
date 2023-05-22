@@ -16,7 +16,7 @@ struct ContentView: View {
                 BackgroundView(count: count)
                     .ignoresSafeArea()
                 Button {
-                    addOneCount()
+                    plusOneCount()
                 } label: {
                     Text("")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -50,7 +50,7 @@ struct ContentView: View {
         }
     }
 
-    private func addOneCount() {
+    private func plusOneCount() {
         count += 1
     }
 
