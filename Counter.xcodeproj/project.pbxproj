@@ -13,6 +13,7 @@
 		FF54D73D2A1A430E00D4367B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54D73C2A1A430E00D4367B /* ContentView.swift */; };
 		FF54D73F2A1A431000D4367B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF54D73E2A1A431000D4367B /* Assets.xcassets */; };
 		FF54D7422A1A431000D4367B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF54D7412A1A431000D4367B /* Preview Assets.xcassets */; };
+		FFA7E4632A1ECE02004A617B /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFA7E4622A1ECE02004A617B /* BackgroundView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		FF54D73C2A1A430E00D4367B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		FF54D73E2A1A431000D4367B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FF54D7412A1A431000D4367B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FFA7E4622A1ECE02004A617B /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,7 @@
 			isa = PBXGroup;
 			children = (
 				FF54D73C2A1A430E00D4367B /* ContentView.swift */,
+				FFA7E4622A1ECE02004A617B /* BackgroundView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -189,6 +192,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FFA7E4632A1ECE02004A617B /* BackgroundView.swift in Sources */,
 				FF4D341C2A1C287800D680B8 /* CountViewModel.swift in Sources */,
 				FF54D73D2A1A430E00D4367B /* ContentView.swift in Sources */,
 				FF54D73B2A1A430E00D4367B /* CounterApp.swift in Sources */,
