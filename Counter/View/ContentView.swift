@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var count: Int = 0
+    //    @AppStorage(wrappedValue: 0, "count") private var count: Int
+    @StateObject var countViewModel = CountViewModel()
+    @State var cont: Int = 0
 
     var body: some View {
         VStack {
             ZStack {
-                BackgroundView(count: count)
+                BackgroundView(count: countViewModel.count)
                     .ignoresSafeArea()
                 Button {
-                    plusOneCount()
+                    countViewModel.plusOneCount()
                 } label: {
                     Text("")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
@@ -24,14 +26,14 @@ struct ContentView: View {
                 }
                 VStack {
                     Spacer()
-                    Text("\(count)")
+                    Text("\(countViewModel.count)")
                         .font(.system(size: 120))
                         .foregroundColor(Color.white)
                         .padding(.bottom, 20)
                     Spacer()
                     HStack {
                         Button {
-                            MinusOneCount()
+                            countViewModel.minusOneCount()
                         } label: {
                             Text("ー")
                                 .font(.system(size: 15))
@@ -48,14 +50,6 @@ struct ContentView: View {
                 }
             }
         }
-    }
-
-    private func plusOneCount() {
-        count += 1
-    }
-
-    private func MinusOneCount() {
-        count -= 1
     }
 }
 

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		FF4D341A2A1C282F00D680B8 /* CountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D34192A1C282F00D680B8 /* CountModel.swift */; };
+		FF4D341C2A1C287800D680B8 /* CountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF4D341B2A1C287800D680B8 /* CountViewModel.swift */; };
 		FF54D73B2A1A430E00D4367B /* CounterApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54D73A2A1A430E00D4367B /* CounterApp.swift */; };
 		FF54D73D2A1A430E00D4367B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF54D73C2A1A430E00D4367B /* ContentView.swift */; };
 		FF54D73F2A1A431000D4367B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FF54D73E2A1A431000D4367B /* Assets.xcassets */; };
@@ -16,6 +17,7 @@
 
 /* Begin PBXFileReference section */
 		FF4D34192A1C282F00D680B8 /* CountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountModel.swift; sourceTree = "<group>"; };
+		FF4D341B2A1C287800D680B8 /* CountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountViewModel.swift; sourceTree = "<group>"; };
 		FF54D7372A1A430E00D4367B /* Counter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Counter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FF54D73A2A1A430E00D4367B /* CounterApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterApp.swift; sourceTree = "<group>"; };
 		FF54D73C2A1A430E00D4367B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -45,6 +47,7 @@
 		FF4D34172A1C264F00D680B8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				FF4D341B2A1C287800D680B8 /* CountViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF4D341C2A1C287800D680B8 /* CountViewModel.swift in Sources */,
 				FF54D73D2A1A430E00D4367B /* ContentView.swift in Sources */,
 				FF54D73B2A1A430E00D4367B /* CounterApp.swift in Sources */,
 				FF4D341A2A1C282F00D680B8 /* CountModel.swift in Sources */,
