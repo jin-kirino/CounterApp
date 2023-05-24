@@ -6,3 +6,15 @@
 //
 
 import Foundation
+
+class CountViewModel: ObservableObject {
+    @Published var count: Int = 0
+
+    func plusOneCount() {
+        count += 1
+    }
+
+    func minusOneCount() {
+        count -= 1
+    }
+}
