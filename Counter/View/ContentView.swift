@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
-    @AppStorage("countKey") var count: Int = 0
+    @ObservedObject var counterModel = CounterModel()
+    @State private var isShowSettingSheet: Bool = false
 
     var body: some View {
         VStack {
             ZStack {
-                BackgroundView(count: count)
+                BackgroundView(count: counterModel.count)
                     .ignoresSafeArea()
                 Button {
                     plusOneCount()
@@ -24,52 +25,61 @@ struct ContentView: View {
                 }
                 VStack {
                     Spacer()
-                    Text("\(count)")
+                    Text("\(counterModel.count)")
                         .font(.system(size: 120))
                         .foregroundColor(Color.white)
                         .padding(.bottom, 20)
                     Spacer()
                     HStack {
                         Button {
-                            count = 0
+                            counterModel.count = 0
                         } label: {
-                            Text("0")
-                                .font(.system(size: 15))
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(Color.white)
-                                .overlay(
-                                    Circle()
-                                        .stroke(Color.white, lineWidth: 3)
-                                )
+                            BottonView(buttonName: "0")
                                 .padding(.leading)
                         }
-
                         Button {
                             minusOneCount()
                         } label: {
-                            Text("ー")
-                                .font(.system(size: 15))
-                                .frame(width: 20, height: 20)
-                                .foregroundColor(Color.white)
-                                .overlay(
-                                    Circle()
-                                        .stroke(Color.white, lineWidth: 3)
-                                )
-                                                            .padding(.leading)
+                            BottonView(buttonName: "ー")
+                                .padding(.leading)
                         }
                         Spacer()
+                        Button {
+                            isShowSettingSheet = true
+                        } label: {
+                            BottonView(buttonName: "i")
+                                .padding(.trailing)
+                        }
+                        .sheet(isPresented: $isShowSettingSheet) {
+                            SettingView()
+                        }
                     }
                 }
             }
         }
     }
 
+    struct BottonView: View {
+        var buttonName: String
+
+        var body: some View {
+            Text(buttonName)
+                .font(.system(size: 15))
+                .frame(width: 20, height: 20)
+                .foregroundColor(Color.white)
+                .overlay(
+                    Circle()
+                        .stroke(Color.white, lineWidth: 3)
+                )
+        }
+    }
+
     private func plusOneCount() {
-        count += 1
+        counterModel.count += 1
     }
 
     private func minusOneCount() {
-        count -= 1
+        counterModel.count -= 1
     }
 }
 
