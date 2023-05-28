@@ -9,28 +9,32 @@ import SwiftUI
 
 struct BackgroundView: View {
     let count: Int
+//    let isSetGradation: Bool
 
     var body: some View {
-        if count % 10 == 0 {
+        switch count % 10 {
+        case 0:
             Color.black
-        } else if count % 10 == 1 {
+        case 1:
             Color.red
-        } else if count % 10 == 2 {
+        case 2:
             Color.gray
-        } else if count % 10 == 3 {
+        case 3:
             Color.blue
-        } else if count % 10 == 4 {
+        case 4:
             Color.green
-        } else if count % 10 == 5 {
+        case 5:
             Color.orange
-        } else if count % 10 == 6 {
+        case 6:
             Color.yellow
-        } else if count % 10 == 7 {
+        case 7:
             Color.brown
-        } else if count % 10 == 8 {
+        case 8:
             Color.cyan
-        } else if count % 10 == 9 {
+        case 9:
             Color.indigo
+        default:
+            Color.clear
         }
     }
 }
