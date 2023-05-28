@@ -31,6 +31,20 @@ struct ContentView: View {
                     Spacer()
                     HStack {
                         Button {
+                            count = 0
+                        } label: {
+                            Text("0")
+                                .font(.system(size: 15))
+                                .frame(width: 20, height: 20)
+                                .foregroundColor(Color.white)
+                                .overlay(
+                                    Circle()
+                                        .stroke(Color.white, lineWidth: 3)
+                                )
+                                .padding(.leading)
+                        }
+
+                        Button {
                             minusOneCount()
                         } label: {
                             Text("ー")
@@ -41,7 +55,7 @@ struct ContentView: View {
                                     Circle()
                                         .stroke(Color.white, lineWidth: 3)
                                 )
-                                .padding(.leading)
+                                                            .padding(.leading)
                         }
                         Spacer()
                     }
