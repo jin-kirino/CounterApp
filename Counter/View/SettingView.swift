@@ -8,8 +8,33 @@
 import SwiftUI
 
 struct SettingView: View {
+    @ObservedObject var counterModel = CounterModel()
+    @Environment(\.dismiss) var dismiss
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        NavigationView {
+            Form {
+                Section(header: Text("設定")) {
+                    Toggle(isOn: $counterModel.isGradation) {
+                        Text("グラデーション")
+                    }
+                    Toggle(isOn: $counterModel.isChangeBackgroundColor) {
+                        Text("色を変更")
+                    }
+                }
+            }
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        UserDefaults.standard.set(counterModel.isGradation, forKey: "gradationKey")
+                        UserDefaults.standard.set(counterModel.isChangeBackgroundColor, forKey: "ChangeBackgroundColorKey")
+                        dismiss()
+                    } label: {
+                        Text("完了")
+                    }
+                }
+            }
+        }
     }
 }
 
