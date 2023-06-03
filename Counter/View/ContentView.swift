@@ -10,6 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @ObservedObject var counterModel = CounterModel()
     @State private var isShowSettingSheet: Bool = false
+    @State private var showingDialog = false
 
     var body: some View {
         VStack {
@@ -32,10 +33,20 @@ struct ContentView: View {
                     Spacer()
                     HStack {
                         Button {
-                            counterModel.count = 0
+                            showingDialog = true
                         } label: {
                             BottonView(buttonName: "0")
                                 .padding(.leading)
+                        }
+                        .confirmationDialog("最終確認", isPresented: $showingDialog, titleVisibility: .visible) {
+                            Button {
+                                counterModel.count = 0
+                            } label: {
+                                Text("リセット")
+                                    .foregroundColor(Color.roseRed)
+                            }
+                        } message: {
+                            Text("本当にリセットしますか？")
                         }
                         Button {
                             minusOneCount()
