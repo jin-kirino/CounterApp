@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct BackgroundView: View {
-    @ObservedObject var counterModel = CounterModel()
+    var counterModel = CounterModel()
     let count: Int
 
     var body: some View {
@@ -39,7 +39,6 @@ struct BackgroundView: View {
                 default:
                     Color.allGradation
                 }
-
             } else {
                 // 色変えるビビット
                 switch count % 10 {
@@ -76,11 +75,5 @@ struct BackgroundView: View {
                 Color.darkBrown
             }
         }
-    }
-}
-
-struct BackgroundView_Previews: PreviewProvider {
-    static var previews: some View {
-        BackgroundView(count: 0)
     }
 }

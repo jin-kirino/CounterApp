@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SettingView: View {
     @ObservedObject var counterModel = CounterModel()
-    @Environment(\.dismiss) var dismiss
+    @Environment(\.isPresented) var isPresented
 
     var body: some View {
         NavigationView {
@@ -20,17 +20,6 @@ struct SettingView: View {
                     }
                     Toggle(isOn: $counterModel.isChangeBackgroundColor) {
                         Text("色を変更")
-                    }
-                }
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button {
-                        UserDefaults.standard.set(counterModel.isGradation, forKey: "gradationKey")
-                        UserDefaults.standard.set(counterModel.isChangeBackgroundColor, forKey: "ChangeBackgroundColorKey")
-                        dismiss()
-                    } label: {
-                        Text("完了")
                     }
                 }
             }
