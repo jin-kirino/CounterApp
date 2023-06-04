@@ -43,25 +43,25 @@ struct BackgroundView: View {
                 // 色変えるビビット
                 switch count % 10 {
                 case 0:
-                    Color.black
+                    Color.jetBlack
                 case 1:
-                    Color.red
+                    Color.purple
                 case 2:
-                    Color.gray
+                    Color.realOrange
                 case 3:
-                    Color.blue
+                    Color.naturalGreen
                 case 4:
-                    Color.green
+                    Color.skyBlue
                 case 5:
-                    Color.orange
+                    Color.navy
                 case 6:
-                    Color.yellow
+                    Color.limeGreen
                 case 7:
-                    Color.brown
+                    Color.pink
                 case 8:
-                    Color.cyan
+                    Color.roseRed
                 case 9:
-                    Color.indigo
+                    Color.darkGreen
                 default:
                     Color.darkBrown
                 }
