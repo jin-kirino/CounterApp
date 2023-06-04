@@ -26,7 +26,7 @@ extension Color {
     static let skyBlue = Color("skyBlue")
 
     // グラデーション
-    static let allGradation = RadialGradient(gradient: Gradient(colors: [.purple, .navy, .skyBlue, .darkGreen, .limeGreen, .lemonYellow, .realOrange, .roseRed]), center: .center, startRadius: 1, endRadius: 300)
+    static let allGradation = RadialGradient(gradient: Gradient(colors: [.purple, .blue, .green, .yellow, .orange, .red]), center: .center, startRadius: 30, endRadius: 300)
     static let lemonYellToSkyBlue = LinearGradient(gradient: Gradient(colors: [.lemonYellow, .skyBlue]), startPoint: .leading, endPoint: .trailing)
     static let pinkToPurple = RadialGradient(gradient: Gradient(colors: [.pink, .purple]), center: .center, startRadius: 1, endRadius: 300)
     static let skyBlueToNavy = LinearGradient(gradient: Gradient(colors: [.skyBlue, .navy]), startPoint: .leading, endPoint: .trailing)
