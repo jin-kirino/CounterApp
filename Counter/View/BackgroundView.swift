@@ -17,27 +17,27 @@ struct BackgroundView: View {
                 // 色変えるグラデーション
                 switch count % 10 {
                 case 0:
-                    Color.lemonYellToSkyBlue
+                    Color.realOrangeToNavy
                 case 1:
-                    Color.pinkToPurple
+                    Color.pinlToSkyBlue
                 case 2:
                     Color.skyBlueToNavy
                 case 3:
-                    Color.realOrangeToRoseRed
+                    Color.orangeToRoseRed
                 case 4:
                     Color.purpleToJetBlack
                 case 5:
                     Color.limeGreenToDarkGreen
                 case 6:
-                    Color.pinlToSkyBlue
+                    Color.pinkToPurple
                 case 7:
                     Color.pureWhiteToPurple
                 case 8:
-                    Color.realOrangeToNavy
+                    Color.lemonYellToSkyBlue
                 case 9:
                     Color.jetBlackToSkyBlue
                 default:
-                    Color.clear
+                    Color.allGradation
                 }
 
             } else {
@@ -64,7 +64,7 @@ struct BackgroundView: View {
                 case 9:
                     Color.indigo
                 default:
-                    Color.clear
+                    Color.darkBrown
                 }
             }
         } else {
