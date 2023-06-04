@@ -77,6 +77,7 @@ struct ContentView: View {
                     Circle()
                         .stroke(Color.white, lineWidth: 3)
                 )
+                .padding(.bottom)
                 .padding(.leading)
         }
     }
