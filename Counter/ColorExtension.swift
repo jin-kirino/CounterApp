@@ -34,7 +34,7 @@ extension Color {
     static let purpleToJetBlack = LinearGradient(gradient: Gradient(colors: [.purple, .jetBlack]), startPoint: .leading, endPoint: .trailing)
     static let limeGreenToDarkGreen = LinearGradient(gradient: Gradient(colors: [.limeGreen, .darkGreen]), startPoint: .leading, endPoint: .trailing)
     static let pinlToSkyBlue = LinearGradient(gradient: Gradient(colors: [.pink, .skyBlue]), startPoint: .leading, endPoint: .trailing)
-    static let pureWhiteToPurple = LinearGradient(gradient: Gradient(colors: [.pureWhite, purple]), startPoint: .leading, endPoint: .trailing)
+    static let skyBuleToPurple = LinearGradient(gradient: Gradient(colors: [.skyBlue, purple]), startPoint: .leading, endPoint: .trailing)
     static let realOrangeToNavy = LinearGradient(gradient: Gradient(colors: [.realOrange, .navy]), startPoint: .top, endPoint: .bottom)
     static let jetBlackToSkyBlue = LinearGradient(gradient: Gradient(colors: [.jetBlack, .skyBlue]), startPoint: .leading, endPoint: .trailing)
 }

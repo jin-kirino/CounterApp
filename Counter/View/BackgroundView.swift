@@ -31,7 +31,7 @@ struct BackgroundView: View {
                 case 6:
                     Color.pinkToPurple
                 case 7:
-                    Color.pureWhiteToPurple
+                    Color.skyBuleToPurple
                 case 8:
                     Color.lemonYellToSkyBlue
                 case 9:
