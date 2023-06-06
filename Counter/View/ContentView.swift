@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var counterModel = CounterModel()
-    @State private var isShowSettingSheet: Bool = false
     @State private var showingDialog = false
 
     var body: some View {
